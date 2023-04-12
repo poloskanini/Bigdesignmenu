@@ -1,0 +1,66 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap");
+
+
+body {
+  font-family: 'Crimson Text', serif;
+  font-family: 'Cormorant Garamond', sans-serif;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', sans-serif; 
+}
+
+.item {
+  position: relative;
+  width: 100%;
+  margin-top: 3rem;
+
+  .item__content {
+    display: flex;
+    width: 100%;
+    padding: 0 3vw;
+    height: 14vw;
+    border-bottom: 1px solid black;
+    align-items: center; 
+
+    .item__number {
+       font-weight: 500;
+       text-decoration: underline;
+       margin-right: 2vw;
+       margin-top: 4vw;
+       font-size: 2.3vw;
+       align-self: flex-start
+    }
+
+    .item__metas {
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      margin-top: 2.7vw;
+
+      span {
+        font-weight: 100;
+        font-size: 1.2vw;
+        text-transform: uppercase;
+        letter-spacing: .10vw;
+      }
+
+      strong {
+        font-size: 1.3vw;
+        font-weight: 800;
+      }
+    }
+
+    h2 {
+      font-size: 7vw;
+      font-weight: 400;
+    }
+  }
+}
