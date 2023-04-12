@@ -16,7 +16,7 @@ body {
 h2 {
   font-family: 'Cormorant Garamond', sans-serif;
   font-size: 7vw;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .item {
@@ -27,7 +27,7 @@ h2 {
   &:before {
     content: '';
     position: absolute;
-    height: .2vw;
+    height: 1px;
     background: $red;
     left: 0;
     bottom: 0;
@@ -38,7 +38,7 @@ h2 {
     display: flex;
     width: 100%;
     padding: 0 3vw;
-    height: 14vw;
+    height: 20vw;
     align-items: center; 
 
     .item__number {
