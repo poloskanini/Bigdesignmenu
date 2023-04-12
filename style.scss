@@ -6,6 +6,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap");
 
+$red: #C92D1F;
 
 body {
   font-family: 'Crimson Text', serif;
@@ -13,20 +14,31 @@ body {
 }
 
 h2 {
-  font-family: 'Cormorant Garamond', sans-serif; 
+  font-family: 'Cormorant Garamond', sans-serif;
+  font-size: 7vw;
+  font-weight: 600;
 }
 
 .item {
   position: relative;
   width: 100%;
-  margin-top: 3rem;
+  color: $red;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: .2vw;
+    background: $red;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
 
   .item__content {
     display: flex;
     width: 100%;
     padding: 0 3vw;
     height: 14vw;
-    border-bottom: 1px solid black;
     align-items: center; 
 
     .item__number {
@@ -46,21 +58,16 @@ h2 {
       margin-top: 2.7vw;
 
       span {
-        font-weight: 100;
-        font-size: 1.2vw;
+        font-weight: 900;
+        font-size: 1.1vw;
         text-transform: uppercase;
         letter-spacing: .10vw;
       }
 
       strong {
-        font-size: 1.3vw;
+        font-size: 1.5vw;
         font-weight: 800;
       }
-    }
-
-    h2 {
-      font-size: 7vw;
-      font-weight: 400;
     }
   }
 }
