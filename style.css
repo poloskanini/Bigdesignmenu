@@ -53,12 +53,12 @@ h2 {
   margin-top: 2.7vw;
 }
 .item .item__content .item__metas span {
-  font-weight: 900;
-  font-size: 1.1vw;
+  font-weight: 100;
+  font-size: 2vw;
   text-transform: uppercase;
   letter-spacing: 0.1vw;
 }
 .item .item__content .item__metas strong {
-  font-size: 1.5vw;
+  font-size: 1.6vw;
   font-weight: 800;
 }/*# sourceMappingURL=style.css.map */

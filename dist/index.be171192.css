@@ -11,39 +11,107 @@ body {
 
 h2 {
   font-family: Cormorant Garamond, sans-serif;
-  font-size: 7vw;
+  font-size: 6vw;
   font-weight: 500;
+}
+
+ul {
+  width: 100%;
+  margin: 0 auto;
+  list-style-type: none;
 }
 
 .item {
   width: 100%;
   color: #c92d1f;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
   position: relative;
+  overflow: hidden;
 }
 
 .item:before {
   content: "";
   height: 1px;
   width: 100%;
+  transform-origin: 0;
   background: #c92d1f;
+  transition: transform 1.8s ease-in-out;
   position: absolute;
   bottom: 0;
   left: 0;
+  transform: scaleX(0);
+}
+
+.item.visible {
+  opacity: 1;
+}
+
+.item.visible:before {
+  transform: scaleX(1);
+}
+
+.item.visible .item__content {
+  transform: translateY(0);
+}
+
+.item:hover .item__content {
+  color: #fff;
+}
+
+.item:hover .item__background {
+  background-size: 120%;
+}
+
+.item:hover .item__background:after {
+  transform: translateY(-100%);
+}
+
+.item .item__background {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: background-size .5s ease-out;
+  position: absolute;
+}
+
+.item .item__background:before {
+  content: "";
+  background-color: #0003;
+  position: absolute;
+  inset: 0;
+}
+
+.item .item__background:after {
+  content: "";
+  background: #fff;
+  transition: transform .3s ease-out;
+  position: absolute;
+  inset: 0;
+  transform: translateY(0);
 }
 
 .item .item__content {
   width: 100%;
-  height: 20vw;
+  height: 13vw;
+  color: #c92d1f;
+  cursor: pointer;
   align-items: center;
   padding: 0 3vw;
+  transition: transform 1s ease-out, color .3s ease-in-out;
   display: flex;
+  transform: translateY(20%);
 }
 
 .item .item__content .item__number {
+  text-underline-offset: 12px;
   align-self: flex-start;
   margin-top: 4vw;
   margin-right: 2vw;
-  font-size: 2.3vw;
+  font-size: 2vw;
   font-weight: 500;
   text-decoration: underline;
 }
@@ -58,14 +126,15 @@ h2 {
 
 .item .item__content .item__metas span {
   text-transform: uppercase;
-  letter-spacing: .1vw;
-  font-size: 1.1vw;
-  font-weight: 900;
+  letter-spacing: .02vw;
+  font-size: 2vw;
+  font-weight: 100;
 }
 
 .item .item__content .item__metas strong {
-  font-size: 1.5vw;
-  font-weight: 800;
+  font-family: Crimson Text, serif;
+  font-size: 1.6vw;
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=index.be171192.css.map */
