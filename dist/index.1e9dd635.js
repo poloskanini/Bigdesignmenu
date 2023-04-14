@@ -3,7 +3,7 @@ const ratio = .9;
 const options = {
     root: null,
     // rootMargin: '-50px',
-    rootMargin: "-40px",
+    rootMargin: "0px",
     threshold: ratio
 };
 const handleIntersect = function(entries, observer) {
