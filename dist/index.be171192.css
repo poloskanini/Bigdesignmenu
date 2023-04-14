@@ -5,23 +5,20 @@
   padding: 0;
 }
 
-body {
+.nav__container {
+  width: 100%;
+  margin: 0 auto;
   font-family: Cormorant Garamond, sans-serif;
+  list-style-type: none;
 }
 
-h2 {
+.nav__container h2 {
   font-family: Cormorant Garamond, sans-serif;
   font-size: 6vw;
   font-weight: 500;
 }
 
-ul {
-  width: 100%;
-  margin: 0 auto;
-  list-style-type: none;
-}
-
-.item {
+.nav__container .item {
   width: 100%;
   color: #c92d1f;
   opacity: 0;
@@ -30,7 +27,7 @@ ul {
   overflow: hidden;
 }
 
-.item:before {
+.nav__container .item:before {
   content: "";
   height: 1px;
   width: 100%;
@@ -43,31 +40,31 @@ ul {
   transform: scaleX(0);
 }
 
-.item.visible {
+.nav__container .item.visible {
   opacity: 1;
 }
 
-.item.visible:before {
+.nav__container .item.visible:before {
   transform: scaleX(1);
 }
 
-.item.visible .item__content {
+.nav__container .item.visible .item__content {
   transform: translateY(0);
 }
 
-.item:hover .item__content {
+.nav__container .item:hover .item__content {
   color: #fff;
 }
 
-.item:hover .item__background {
+.nav__container .item:hover .item__background {
   background-size: 120%;
 }
 
-.item:hover .item__background:after {
+.nav__container .item:hover .item__background:after {
   transform: translateY(-100%);
 }
 
-.item .item__background {
+.nav__container .item .item__background {
   width: 100%;
   height: 100%;
   z-index: -1;
@@ -78,14 +75,14 @@ ul {
   position: absolute;
 }
 
-.item .item__background:before {
+.nav__container .item .item__background:before {
   content: "";
   background-color: #0003;
   position: absolute;
   inset: 0;
 }
 
-.item .item__background:after {
+.nav__container .item .item__background:after {
   content: "";
   background: #fff;
   transition: transform .3s ease-out;
@@ -94,7 +91,7 @@ ul {
   transform: translateY(0);
 }
 
-.item .item__content {
+.nav__container .item .item__content {
   width: 100%;
   height: 13vw;
   color: #c92d1f;
@@ -106,7 +103,7 @@ ul {
   transform: translateY(20%);
 }
 
-.item .item__content .item__number {
+.nav__container .item .item__content .item__number {
   text-underline-offset: 12px;
   align-self: flex-start;
   margin-top: 4vw;
@@ -116,7 +113,7 @@ ul {
   text-decoration: underline;
 }
 
-.item .item__content .item__metas {
+.nav__container .item .item__content .item__metas {
   text-align: right;
   flex-direction: column;
   margin-top: 2.7vw;
@@ -124,14 +121,14 @@ ul {
   display: flex;
 }
 
-.item .item__content .item__metas span {
+.nav__container .item .item__content .item__metas span {
   text-transform: uppercase;
   letter-spacing: .02vw;
   font-size: 2vw;
   font-weight: 100;
 }
 
-.item .item__content .item__metas strong {
+.nav__container .item .item__content .item__metas strong {
   font-family: Crimson Text, serif;
   font-size: 1.6vw;
   font-weight: 100;
