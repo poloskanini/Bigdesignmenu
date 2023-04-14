@@ -104,7 +104,7 @@
 }
 
 .nav__container .item .item__content .item__number {
-  text-underline-offset: 20px;
+  text-underline-offset: 12px;
   align-self: flex-start;
   margin-top: 4vw;
   margin-right: 2vw;
